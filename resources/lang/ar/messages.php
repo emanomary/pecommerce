@@ -75,5 +75,17 @@ return [
     'errorNotFoundVendor'=> 'هذا المتجر غير موجود',
     'errorUpdateVendor'=> 'حدث خطأ ما لم يتم تعديل المتجر',
     'updateStore'=> 'تعديل متجر',
+    'error'=> 'هناك خطأ في البيانات',
+    'totalSales'=> 'إجمالي المبيعات',
+    'TotalOrders'=> 'إجمالي الطلبات',
+    'NumberOfProducts'=> 'عدد المنتجات',
+    'orderId'=> 'رقم الطلب',
+    'customer'=> 'العميل',
+    'orderCost'=> 'سعر الطلب',
+    'total'=> 'الإجمالي',
+    'latestOrders'=> 'أحدث الطلبات',
+    'latestRatings'=> 'آخر التقييمات',
+    'product'=> 'المنتج',
+    'rate'=> 'التقييم',
 
 ];

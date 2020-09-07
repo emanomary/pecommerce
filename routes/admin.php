@@ -13,12 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//note that the prefix is admin for all file route.
-Route::group(['namespace'=>'Dashboard','middleware'=>'auth:admin'],function (){
-    Route::get('/','DashboardController@index')->name('admin.dashboard');
+/*
+ * note that the prefix is admin for all file route.
+*/
+Route::group(['namespace'=>'Dashboard','middleware'=>'auth:admin'],function ()
+{
+    //first page admin visits if authentecated
+    Route::get('/','DashboardController@index')->name('dashboard.index');
 });
 
-Route::group(['namespace'=>'Dashboard'],function (){
+/*
+ * routes to admin login
+*/
+Route::group(['namespace'=>'Dashboard','middleware'=>'guest:admin'],function (){
     route::get('login','LoginController@login')->name('admin.login');
     Route::post('login','LoginController@postLogin')->name('admin.post.login');
 });

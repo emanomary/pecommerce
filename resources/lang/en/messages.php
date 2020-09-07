@@ -73,6 +73,18 @@ return [
     'password'=> 'Password',
     'errorNotFoundVendor'=> 'This vendor not found',
     'errorUpdateVendor'=> 'An error occurred, vendor not updated',
-
+    'error'=> 'Data is error',
+    'totalSales'=> 'Total Sales',
+    'TotalOrders'=> 'Total Requests',
+    'NumberOfProducts'=> 'Number Of Products',
+    'NumberOfClients'=> 'Number Of Clients',
+    'orderId'=> 'Order ID',
+    'customer'=> 'Customer',
+    'orderCost'=> 'Order Cost',
+    'total'=> 'Total',
+    'latestOrders'=> 'Latest Orders',
+    'latestRatings'=> 'Latest Ratings',
+    'product'=> 'Product',
+    'rate'=> 'Rate',
 
 ];
