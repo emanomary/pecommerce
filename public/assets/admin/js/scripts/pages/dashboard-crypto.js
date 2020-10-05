@@ -1,6 +1,6 @@
 /*=========================================================================================
-    File Name: admin-crypto.js
-    Description: intialize admin crypto
+    File Name: dashboard-crypto.js
+    Description: intialize dashboard crypto
     ----------------------------------------------------------------------------------------
     Item Name: Modern Admin - Clean Bootstrap 4 Dashboard HTML Template
     Version: 1.0
@@ -261,7 +261,7 @@ $(window).on("load", function(){
                 // Setup grid
                 grid: {
                     x: 40,
-                    x2: 0,
+                    x2: 0,                    
                     borderColor: '#e3e3e3'
                 },
 
@@ -313,11 +313,11 @@ $(window).on("load", function(){
                         boundaryGap : true,
                         axisLine: {
                             lineStyle: {
-                                color: '#fff'
+                                color: '#fff'                                
                             }
                         },
                         axisTick: {onGap:false},
-                        splitLine: {show:false},
+                        splitLine: {show:false},                        
                         data : [
                             "2017/1/24", "2017/1/25", "2017/1/28", "2017/1/29", "2017/1/30",
                             "2017/1/31", "2017/2/1", "2017/2/4", "2017/2/5", "2017/2/6",
@@ -486,7 +486,7 @@ $(window).on("load", function(){
                             [2190.1,2148.35,2126.22,2190.1]
                         ],
                         markPoint : {
-                            symbol: 'star',
+                            symbol: 'star',                            
                             //symbolSize:20,
                             itemStyle:{
                                 normal:{label:{position:'top'}}

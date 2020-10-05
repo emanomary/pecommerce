@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,19 +14,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*
- * note that the prefix is admin for all file route.
-*/
-Route::group(['namespace'=>'Dashboard','middleware'=>'auth:admin'],function ()
-{
-    //first page admin visits if authentecated
-    Route::get('/','DashboardController@index')->name('dashboard.index');
-});
+//use multi language
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+    ], function(){
 
-/*
- * routes to admin login
-*/
-Route::group(['namespace'=>'Dashboard','middleware'=>'guest:admin'],function (){
-    route::get('login','LoginController@login')->name('admin.login');
-    Route::post('login','LoginController@postLogin')->name('admin.post.login');
+    //note that the prefix is admin for all file route.
+    Route::group(['namespace'=>'Dashboard','middleware'=>'auth:admin','prefix'=>'admin'],function ()
+    {
+        //first page admin visits if authentecated
+        Route::get('/','DashboardController@index')->name('dashboard.index');
+        //shipping
+        Route::group(['prefix'=>'settings'],function (){
+            Route::get('setting-methods/{type}','SettingController@editShipping')->name('edit.shipping');
+            Route::put('setting-methods/{id}','SettingController@updateShipping')->name('update.shipping');
+
+        });
+
+    });
+
+    /*
+     * routes to admin login
+    */
+    Route::group(['namespace'=>'Dashboard','middleware'=>'guest:admin','prefix'=>'admin'],function (){
+        route::get('login','LoginController@login')->name('admin.login');
+        Route::post('login','LoginController@postLogin')->name('admin.post.login');
+    });
+
 });

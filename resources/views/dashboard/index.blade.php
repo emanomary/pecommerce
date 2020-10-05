@@ -16,7 +16,7 @@
                                             <h1><i class="cc BTC warning font-large-2" title="BTC"></i></h1>
                                         </div>
                                         <div class="col-5 pl-2">
-                                            <h4>{{__('messages.totalSales')}}</h4>
+                                            <h6>{{__('messages.totalSales')}}</h6>
                                             <h6 class="text-muted"></h6>
                                         </div>
                                         <div class="col-5 text-right">
@@ -42,7 +42,7 @@
                                             <h1><i class="cc ETH blue-grey lighten-1 font-large-2" title="ETH"></i></h1>
                                         </div>
                                         <div class="col-5 pl-2">
-                                            <h4>{{__('messages.TotalOrders')}}</h4>
+                                            <h6>{{__('messages.TotalOrders')}}</h6>
                                             <h6 class="text-muted"></h6>
                                         </div>
                                         <div class="col-5 text-right">
@@ -68,7 +68,7 @@
                                             <h1><i class="cc XRP info font-large-2" title="XRP"></i></h1>
                                         </div>
                                         <div class="col-5 pl-2">
-                                            <h4>{{__('messages.NumberOfProducts')}}</h4>
+                                            <h6>{{__('messages.NumberOfProducts')}}</h6>
                                             <h6 class="text-muted"></h6>
                                         </div>
                                         <div class="col-5 text-right">
@@ -96,7 +96,7 @@
                                             <h1><i class="cc XRP info font-large-2" title="XRP"></i></h1>
                                         </div>
                                         <div class="col-5 pl-2">
-                                            <h4>{{__('messages.NumberOfClients')}}</h4>
+                                            <h6>{{__('messages.NumberOfClients')}}</h6>
                                             <h6 class="text-muted"></h6>
                                         </div>
                                         <div class="col-5 text-right">
@@ -107,7 +107,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
-                                        <canvas id="" class="height-75"></canvas>
+                                        <canvas id="rp-chartjs" class="height-75"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -118,7 +118,7 @@
 
                 <!-- Sell Orders & Buy Order -->
                 <div class="row match-height">
-                    <div class="col-12 col-xl-12">
+                    <div class="col-12 col-xl-8">
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">{{__('messages.latestOrders')}}</h4>
@@ -153,7 +153,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-xl-12">
+                    <div class="col-12 col-xl-4">
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">{{__('messages.latestRatings')}}</h4>
@@ -190,3 +190,5 @@
         </div>
     </div>
 @endsection
+
+

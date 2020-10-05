@@ -79,6 +79,7 @@ return [
     'totalSales'=> 'إجمالي المبيعات',
     'TotalOrders'=> 'إجمالي الطلبات',
     'NumberOfProducts'=> 'عدد المنتجات',
+    'NumberOfClients'=> 'عدد العملاء',
     'orderId'=> 'رقم الطلب',
     'customer'=> 'العميل',
     'orderCost'=> 'سعر الطلب',
@@ -87,5 +88,11 @@ return [
     'latestRatings'=> 'آخر التقييمات',
     'product'=> 'المنتج',
     'rate'=> 'التقييم',
-
+    'settings'=> 'الإعدادات',
+    'deliveryMethods'=> 'وسائل التوصيل',
+    'freeDelivery'=> 'توصيل مجاني',
+    'internalDelivery'=> 'توصيل داخلي',
+    'externalDelivery'=> 'توصيل خارجي',
+    'editDeliveryMethod'=> 'تعديل وسيلة توصيل',
+    'deliveryMethodData'=> 'بيانات وسيلة التوصيل',
 ];

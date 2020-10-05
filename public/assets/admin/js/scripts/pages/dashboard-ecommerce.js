@@ -1,6 +1,6 @@
 /*=========================================================================================
-    File Name: admin-ecommerce.js
-    Description: admin-ecommerce
+    File Name: dashboard-ecommerce.js
+    Description: dashboard-ecommerce
     ----------------------------------------------------------------------------------------
     Item Name: Modern Admin - Clean Bootstrap 4 Dashboard HTML Template
     Version: 1.0
@@ -12,7 +12,7 @@ $(window).on("load", function(){
     $('#recent-buyers, #new-orders').perfectScrollbar({
         wheelPropagation: true
     });
-
+    
     /********************************************
     *               Monthly Sales               *
     ********************************************/
@@ -37,10 +37,10 @@ $(window).on("load", function(){
         barColors: ['#FF394F'],
         hideHover: 'auto',
     });
-
+    
 });
 (function(window, document, $) {
-    'use strict';
+    'use strict';    
     /*************************************************
     *               Score Chart                      *
     *************************************************/
@@ -204,7 +204,7 @@ $(window).on("load", function(){
                 {meta:'Revenue', value: 12},
                 {meta:'Revenue', value: 7},
                 {meta:'Revenue', value: 14},
-
+             
             ]
         ]
     }, {

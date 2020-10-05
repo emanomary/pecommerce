@@ -86,5 +86,11 @@ return [
     'latestRatings'=> 'Latest Ratings',
     'product'=> 'Product',
     'rate'=> 'Rate',
-
+    'settings'=> 'Settings',
+    'deliveryMethods'=> 'Delivery Methods',
+    'freeDelivery'=> 'Free Delivery',
+    'internalDelivery'=> 'Internal Delivery',
+    'externalDelivery'=> 'External Delivery',
+    'editDeliveryMethod'=> 'Edit Delivery Method',
+    'deliveryMethodData'=> 'Delivery Method Data',
 ];

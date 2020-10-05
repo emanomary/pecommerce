@@ -96,7 +96,7 @@ $(function () {
                         done: true
                     },
                     {
-                        title: 'Complete admin page design',
+                        title: 'Complete dashboard page design',
                         done: true
                     },
                     {

@@ -1,5 +1,5 @@
 /*=========================================================================================
-    File Name: admin-analytics.js
+    File Name: dashboard-analytics.js
     Description: intialize advance cards
     ----------------------------------------------------------------------------------------
     Item Name: Modern Admin - Clean Bootstrap 4 Dashboard HTML Template
@@ -148,7 +148,7 @@
 
     // Hit Rate Chart - CharJS Doughnut
     Chart.defaults.hitRateDoughnut = Chart.defaults.doughnut;
-    var draw = Chart.controllers.doughnut.prototype.draw;
+    var draw = Chart.controllers.doughnut.prototype.draw;    
     var customDoughnut = Chart.controllers.doughnut.extend({
         draw: function() {
             draw.apply(this, arguments);
@@ -163,7 +163,7 @@
 
             var text = "82%",
             textX = Math.round((width - this.chart.ctx.measureText(text).width) / 2),
-            textY = height / 2;
+            textY = height / 2;            
 
             this.chart.ctx.fillText(text, textX, textY);
 
@@ -172,13 +172,13 @@
                 ctx.shadowColor = '#bbbbbb';
                 ctx.shadowBlur = 30;
                 ctx.shadowOffsetX = 0;
-                ctx.shadowOffsetY = 12;
+                ctx.shadowOffsetY = 12;                
                 _fill.apply(this, arguments)
                 ctx.restore();
             }
         }
     });
-
+    
     Chart.controllers.hitRateDoughnut = customDoughnut;
     var ctx = document.getElementById("hit-rate-doughnut");
     var myDoughnutChart = new Chart(ctx, {
@@ -217,7 +217,7 @@
 
     // Deals Chart - CharJS Doughnut
     Chart.defaults.dealsDoughnut = Chart.defaults.doughnut;
-    var draw = Chart.controllers.doughnut.prototype.draw;
+    var draw = Chart.controllers.doughnut.prototype.draw;    
     var customDealDoughnut = Chart.controllers.doughnut.extend({
         draw: function() {
             draw.apply(this, arguments);
@@ -232,7 +232,7 @@
 
             var text = "76%",
             textX = Math.round((width - this.chart.ctx.measureText(text).width) / 2),
-            textY = height / 2;
+            textY = height / 2;            
 
             this.chart.ctx.fillText(text, textX, textY);
 
@@ -241,13 +241,13 @@
                 ctx.shadowColor = '#FF4961';
                 ctx.shadowBlur = 30;
                 ctx.shadowOffsetX = 0;
-                ctx.shadowOffsetY = 12;
+                ctx.shadowOffsetY = 12;                
                 _fill.apply(this, arguments)
                 ctx.restore();
             }
         }
     });
-
+    
     Chart.controllers.dealsDoughnut = customDealDoughnut;
     var ctx = document.getElementById("deals-doughnut");
     var myDoughnutChart = new Chart(ctx, {
@@ -284,10 +284,10 @@
             }
         }
     });
-
-
+    
+    
     //Total Earnings
-
+    
     var ctx3 = document.getElementById("earning-chart").getContext("2d");
 
     // Chart Options
@@ -359,9 +359,9 @@
 
     // Create the chart
     var earningChart = new Chart(ctx3, earningConfig);
-
-
-
+    
+    
+     
     // Vector Maps
     // -----------------------------------
     $('#world-map-markers').vectorMap({
@@ -380,7 +380,7 @@
       }
     });
 
-
+    
     //Sessions by Browser
     // -----------------------------------
     Morris.Donut({
