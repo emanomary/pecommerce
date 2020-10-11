@@ -93,4 +93,9 @@ return [
     'externalDelivery'=> 'External Delivery',
     'editDeliveryMethod'=> 'Edit Delivery Method',
     'deliveryMethodData'=> 'Delivery Method Data',
+    'deliveryType'=> 'Delivery Type',
+    'deliveryValue'=> 'Delivery Value',
+    'successUpdateDelivery'=> 'Successfully Update Delivery Type',
+    'errorUpdateDelivery'=> 'An error occurred, try again',
+
 ];

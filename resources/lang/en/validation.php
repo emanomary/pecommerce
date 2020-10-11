@@ -130,8 +130,11 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'value' => [
+            'required'=> ':attribute is required',
+        ],
+        'plain_value' => [
+            'numeric'=> ':attribute must be number',
         ],
     ],
 
@@ -146,6 +149,9 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'value'=> 'delivery type',
+        'plain_value'=> 'delivery value'
+    ],
 
 ];

@@ -43,7 +43,7 @@
                                     <div class="card-body">
                                         <form class="form"
                                               action="{{route('update.shipping',$shippingMethod->id)}}"
-                                              method="PUT"
+                                              method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
                                             @method('PUT')
@@ -52,67 +52,52 @@
 
                                             <div class="form-body">
                                                 <h4 class="form-section"><i class="ft-home"></i>{{__('messages.deliveryMethodData')}} </h4>
+
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="projectinput1"> {{__('messages.categoryName')}} - {{--{{__('messages.'.$mainCategory->translation_lang)}}--}} </label>
+                                                            <label for="projectinput1"> {{__('messages.deliveryType')}}</label>
                                                             <input type="text"
                                                                    value="{{$shippingMethod->value}}"
-                                                                   id="name"
+                                                                   id="value"
                                                                    class="form-control"
                                                                    placeholder=""
-                                                                   name="category[0][name]">
-                                                            @error('')
+                                                                   name="value">
+                                                            @error('value')
                                                             <span class="text-danger">{{$message}}</span>
                                                             @enderror
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <div class="form-group mt-1">
-                                                            <input type="checkbox"
-                                                                   value="{{--{{$mainCategory->active}}--}}"
-                                                                   name="category[0][active]"
-                                                                   id="switcheryColor4"
-                                                                   class="switchery" data-color="success"
-                                                                   {{--@if($mainCategory->active == 1) checked @endif--}}/>
-                                                            <label for="switcheryColor4"
-                                                                   class="card-title ml-1">{{__('messages.status')}} - {{--{{__('messages.'.$mainCategory->translation_lang)}}--}} </label>
-                                                            @error('')
-                                                            <span class="text-danger">{{$message}}</span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6 hidden">
                                                         <div class="form-group">
-                                                            <label for="projectinput1"> {{__('messages.languageAbbr')}} - {{--{{__('messages.'.$mainCategory->translation_lang)}}--}} </label>
-                                                            <input type="text" id="translation_lang"
+                                                            <label for="projectinput1"> {{__('messages.deliveryValue')}}</label>
+                                                            <input type="number"
+                                                                   value="{{$shippingMethod->plain_value}}"
+                                                                   id="plain_value"
                                                                    class="form-control"
                                                                    placeholder=""
-                                                                   value="{{--{{$mainCategory->translation_lang}}--}}"
-                                                                   name="category[0][abbr]">
-                                                            @error('')
+                                                                   name="plain_value">
+                                                            @error('plain_value')
                                                             <span class="text-danger">{{$message}}</span>
                                                             @enderror
                                                         </div>
                                                     </div>
+                                                 {{--   <div class="col-md-6">
+                                                        <div class="form-group mt-1">
+                                                            <input type="checkbox"
+                                                                   value="--}}{{--{{$mainCategory->active}}--}}{{--"
+                                                                   name="status"
+                                                                   id="switcheryColor4"
+                                                                   class="switchery" data-color="success" checked
+                                                                   --}}{{--@if($mainCategory->active == 1) checked @endif--}}{{--/>
+                                                            <label for="switcheryColor4"
+                                                                   class="card-title ml-1">{{__('messages.status')}}</label>
+                                                            @error('status')
+                                                            <span class="text-danger">{{$message}}</span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>--}}
                                                 </div>
-
-                                                {{--  <div class="row">
-                                                      <div class="col-md-6">
-                                                          <div class="form-group mt-1">
-                                                              <input type="checkbox"  value="1" name="category[{{$index}}][active]"
-                                                                     id="switcheryColor4"
-                                                                     class="switchery" data-color="success"
-                                                                     checked/>
-                                                              <label for="switcheryColor4"
-                                                                     class="card-title ml-1">{{__('messages.status')}} - {{__('messages.'.$language->abbr)}} </label>
-                                                              @error('category.'.$index.'.active')
-                                                              <span class="text-danger">{{$message}}</span>
-                                                              @enderror
-                                                          </div>
-                                                      </div>
-                                                  </div>--}}
 
                                             </div>
 
