@@ -95,4 +95,9 @@ return [
     'externalDelivery'=> 'توصيل خارجي',
     'editDeliveryMethod'=> 'تعديل وسيلة توصيل',
     'deliveryMethodData'=> 'بيانات وسيلة التوصيل',
+    'deliveryType'=> 'نوع وسيلة التوصيل',
+    'deliveryValue'=> 'قيمة التوصيل',
+    'successUpdateDelivery'=> 'تم تحديث وسيلة التوصيل بنجاح',
+    'errorUpdateDelivery'=> 'حدث خطأ ما يرجى المحاولة مرة أخرى',
+
 ];

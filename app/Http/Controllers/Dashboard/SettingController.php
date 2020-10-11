@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ShippingRequest;
 use App\Models\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SettingController extends Controller
 {
@@ -22,8 +24,27 @@ class SettingController extends Controller
         return view('dashboard.settings.shippings.edit',compact('shippingMethod'));
     }
 
-    public function updateShipping(Request $request, $id)
+    public function updateShipping(ShippingRequest $request, $id)
     {
+        try{
+            $shipping_method = Setting::find($id);
+
+            DB::beginTransaction();
+            //save settings of delivery method
+            $shipping_method -> update(['plain_value'=>$request->plain_value]);
+
+            //save translations
+            $shipping_method -> value = $request->value;
+            $shipping_method->save();
+
+            DB::commit();
+            return redirect()->back()->with(['success' => __('messages.successUpdateDelivery')]);
+
+        }catch(\Exception $ex)
+        {
+            DB::rollBack();
+            return redirect()->back()->with(['error' => __('messages.errorUpdateDelivery')]);
+        }
 
     }
 }

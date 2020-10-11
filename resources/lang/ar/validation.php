@@ -130,8 +130,11 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'value' => [
+            'required'=> ':attribute مطلوب',
+        ],
+        'plain_value' => [
+            'numeric'=> ':attribute يجب أن يكون رقم',
         ],
     ],
 
@@ -146,6 +149,9 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'value'=> 'نوع التوصيل',
+        'plain_value'=> 'قيمة التوصيل'
+    ],
 
 ];
