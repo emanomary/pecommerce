@@ -26,6 +26,7 @@ Route::group(
     {
         //first page admin visits if authentecated
         Route::get('/','DashboardController@index')->name('dashboard.index');
+        Route::get('logout','LoginController@logout')->name('admin.logout');
         //shipping
         Route::group(['prefix'=>'settings'],function (){
             Route::get('setting-methods/{type}','SettingController@editShipping')->name('edit.shipping');
