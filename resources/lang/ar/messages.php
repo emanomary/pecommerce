@@ -2,8 +2,8 @@
 
 return [
 
-    'ar'=> 'باللغة العربية',
-    'en'=> 'باللغة الإنجليزية',
+    'ar'=> 'العربية',
+    'en'=> 'الإنجليزية',
     'fr'=> 'باللغة الفرنسية',
     'successAddLanguage'=> 'تم إضافة اللغة بنجاح',
     'errorAddLanguage'=> 'حدث خطأ ما يرجى إعادة المحاولة مرة أخرى',
@@ -37,6 +37,7 @@ return [
     'updateLanguage'=> 'تعديل لغة',
     'addNewMainCategory'=> 'إضافة قسم رئيسي جديد',
     'languages'=> 'اللغات',
+    'language'=> 'اللغة',
     'allSiteLanguages'=> 'جميع لغات الموقع',
     'direction'=> 'الاتجاه',
     'actions'=> 'الإجراءات',
@@ -99,5 +100,13 @@ return [
     'deliveryValue'=> 'قيمة التوصيل',
     'successUpdateDelivery'=> 'تم تحديث وسيلة التوصيل بنجاح',
     'errorUpdateDelivery'=> 'حدث خطأ ما يرجى المحاولة مرة أخرى',
-
+    'profile'=> 'الملف الشخصي',
+    'editProfile'=> 'تعديل الملف الشخصي',
+    'profileData'=> 'بيانات الملف الشخصي',
+    'name'=> 'الاسم',
+    'successUpdateProfile'=> 'تم تحديث الملف الشخصي بنجاح',
+    'errorUpdateProfile'=> 'حدث خطأ ما يرجى المحاولة مرة أخرى',
+    'passwordConfirmation'=> 'تأكيد كلمة المرور',
+    'updatePassword'=> 'تغيير كلمة المرور',
+    'newPassword'=> 'كلمة المرور الجديدة',
 ];

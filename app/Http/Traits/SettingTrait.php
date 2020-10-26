@@ -1,16 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Dashboard;
+namespace App\Http\Traits;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\LoginRequest;
-use App\Http\Traits\SettingTrait;
 
-class LoginController extends Controller
+trait SettingTrait
 {
-    use SettingTrait;
-
-    /*public function login()
+    public function login()
     {
         return view('dashboard.auth.login');
     }
@@ -22,14 +18,14 @@ class LoginController extends Controller
 
         if (auth()->guard('admin')->attempt(['email' => $request->input("email"), 'password' => $request->input("password")], $remember_me))
         {
-             //notify()->success('تم الدخول بنجاح  ');
+            //notify()->success('تم الدخول بنجاح  ');
             return redirect()->route('dashboard.index');
         }
         // notify()->error('خطا في البيانات  برجاء المجاولة مجدا ');
         return redirect()->back()->with(['error' => __('messages.error')]);
-    }*/
+    }
 
-   /* public function logout()
+    public function logout()
     {
         $gaurd = $this->getGaurd();
         $gaurd -> logout();
@@ -39,5 +35,5 @@ class LoginController extends Controller
     private function getGaurd()
     {
         return auth('admin');
-    }*/
+    }
 }

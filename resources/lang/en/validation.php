@@ -136,6 +136,19 @@ return [
         'plain_value' => [
             'numeric'=> ':attribute must be number',
         ],
+        'name' => [
+            'required'=> ':attribute is required',
+            'string'=> ':attribute must be a string'
+        ],
+        'email' => [
+            'required'=> ':attribute is required',
+            'email'=> ':attribute must be correct email',
+            'unique:admins,email'=> ':attribute must be existsً'
+        ],
+        'password' => [
+            'min'=> ':attribute must be at least 8 character',
+            'confirmed'=> 'you must confirm :attribute'
+        ],
     ],
 
     /*
@@ -151,7 +164,11 @@ return [
 
     'attributes' => [
         'value'=> 'delivery type',
-        'plain_value'=> 'delivery value'
+        'plain_value'=> 'delivery value',
+        'name'=> 'name',
+        'email'=> 'email',
+        'password'=> 'password',
+
     ],
 
 ];
