@@ -2,8 +2,8 @@
 
 return [
 
-    'ar'=> 'in arabic',
-    'en'=> 'in english',
+    'ar'=> 'arabic',
+    'en'=> 'english',
     'fr'=> 'in france',
     'successAddLanguage'=> 'Successfully add language',
     'errorAddLanguage'=> 'An error occurred, you can try again ',
@@ -35,6 +35,7 @@ return [
     'addNewLanguage'=> 'Add New Language',
     'addNewMainCategory'=> 'Add New Main Category',
     'languages'=> 'languages',
+    'language'=> 'language',
     'allSiteLanguages'=> 'All Site Languages',
     'direction'=> 'direction',
     'actions'=> 'Actions',
@@ -97,5 +98,14 @@ return [
     'deliveryValue'=> 'Delivery Value',
     'successUpdateDelivery'=> 'Successfully Update Delivery Type',
     'errorUpdateDelivery'=> 'An error occurred, try again',
+    'profile'=> 'Profile',
+    'editProfile'=> 'Edit Profile',
+    'profileData'=> 'Profile Data',
+    'name'=> 'Name',
+    'successUpdateProfile'=> 'Successfully Update Profile',
+    'errorUpdateProfile'=> 'An error occurred, try again',
+    'passwordConfirmation'=> 'Password Confirmation',
+    'updatePassword'=> 'Update Password',
+    'newPassword'=> 'New Password',
 
 ];

@@ -18,6 +18,8 @@ class Setting extends Model
      */
     protected $with = ['translations'];
 
+    protected $table = "settings";
+
     /**
      * the attributes that will translated
      * @var string[]
@@ -29,6 +31,8 @@ class Setting extends Model
      * @var string[]
      */
     protected $fillable = ['key', 'is_translatable', 'plain_value'];
+
+    protected $hidden = ['translations'];
 
     public $timestamps = true;
 

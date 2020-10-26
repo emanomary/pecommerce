@@ -34,6 +34,13 @@ Route::group(
 
         });
 
+        //profile
+        Route::group(['prefix'=>'profile'],function (){
+            Route::get('edit','ProfileController@edit')->name('profile.edit');
+            Route::put('update','ProfileController@update')->name('profile.update');
+
+        });
+
     });
 
     /*

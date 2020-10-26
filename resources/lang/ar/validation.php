@@ -136,6 +136,19 @@ return [
         'plain_value' => [
             'numeric'=> ':attribute يجب أن يكون رقم',
         ],
+        'name' => [
+            'required'=> ':attribute مطلوب',
+            'string'=> ':attribute يجب أن يكون نص'
+        ],
+        'email' => [
+            'required'=> ':attribute مطلوب',
+            'email'=> ':attribute يجب أن يكون عنوان صالح',
+            'unique:admins,email'=> ':attribute موجود مسبقاً'
+        ],
+        'password' => [
+            'min'=> ':attribute لا تقل عن 8 حروف',
+            'confirmed'=> 'الرجاء تأكيد :attribute '
+        ],
     ],
 
     /*
@@ -151,7 +164,10 @@ return [
 
     'attributes' => [
         'value'=> 'نوع التوصيل',
-        'plain_value'=> 'قيمة التوصيل'
+        'plain_value'=> 'قيمة التوصيل',
+        'name'=> 'الاسم',
+        'email'=> 'البريد الإلكتروني',
+        'password'=> 'كلمة المرور'
     ],
 
 ];
