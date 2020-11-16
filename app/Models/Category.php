@@ -47,4 +47,14 @@ class Category extends Model
     public function getActive(){
         return  $this -> is_active  == 1 ?  __('messages.active')   : __('messages.unactive') ;
     }
+
+    public function _parent()
+    {
+        return $this->belongsTo(self::class,'parent_id');
+    }
+
+    public function _childs(){
+        return $this->hasMany(self::class, 'parent_id');
+    }
+
 }

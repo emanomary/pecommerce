@@ -53,34 +53,34 @@
                     </li>
                     <li>
                         <a class="menu-item" href="{{route('maincategories.create')}}" data-i18n="nav.dash.crypto">
-                            {{__('messages.addNewMainCategory')}}
+                            {{__('messages.addNewCategory')}}
                         </a>
                     </li>
                 </ul>
             </li>
-            <li class="nav-item">
+           {{-- <li class="nav-item">
                 <a href="">
                     <i class="la la-group"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">
                         {{__('messages.subCategory')}}
                     </span>
                     <span class="badge badge badge-danger badge-pill float-right mr-2">
-                        {{--App\Models\MainCategory::count()--}}
+                        --}}{{--App\Models\MainCategory::count()--}}{{--
                     </span>
                 </a>
                 <ul class="menu-content">
                     <li class="">
-                        <a class="menu-item" data-i18n="nav.dash.ecommerce" href="{{--route('admin.mainCategories.index')--}}">
+                        <a class="menu-item" data-i18n="nav.dash.ecommerce" href="--}}{{--route('admin.mainCategories.index')--}}{{--">
                             {{__('messages.showAll')}}
                         </a>
                     </li>
                     <li>
-                        <a class="menu-item" href="{{--route('admin.mainCategories.create')--}}" data-i18n="nav.dash.crypto">
+                        <a class="menu-item" href="--}}{{--route('admin.mainCategories.create')--}}{{--" data-i18n="nav.dash.crypto">
                             {{__('messages.addSubCategory')}}
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li>--}}
             <li class="nav-item">
                 <a href="">
                     <i class="la la-male"></i>

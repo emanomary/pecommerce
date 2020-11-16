@@ -13,35 +13,42 @@ class MainCategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::parent()->orderBy('id','desc')->paginate(PAGINATION_COUNT);
+        $categories = Category::with('_parent')->orderBy('id','desc')->paginate(PAGINATION_COUNT);
         return view('dashboard.maincategories.index',compact('categories'));
     }
 
     public function create()
+
     {
-        return view('dashboard.maincategories.create');
+        //$categories = Category::select('id','parent_id')->get();
+        $categories = Category::parent()->get();
+        return view('dashboard.maincategories.create',compact('categories'));
     }
 
     public function store(MainCategoryRequest $request)
     {
-        /*try{
-            DB::beginTransaction();*/
+        try{
+            DB::beginTransaction();
 
             $this->changeStatus($request);
+
+            if ($request->type == 1)
+                $request->request->add(['parent_id' => null]);
+
             $category = Category::create($request->except('_token'));
 
             //save translations
             $category->name = $request->name;
             $category->save();
 
-           // DB::commit();
+           DB::commit();
             return redirect()->route('maincategories.index')->with(['success' => __('messages.successAddCategory')]);
 
-      /*  }catch (\Exception $ex)
+        }catch (\Exception $ex)
         {
             DB::rollBack();
             return redirect()->route('maincategories.index')->with(['error' => __('messages.errorAddCategory')]);
-        }*/
+        }
 
     }
 

@@ -113,4 +113,10 @@ return [
     'active'=> 'Active',
     'unactive'=> 'Not Active',
     'successDeleteCategory'=> 'Successfully Delete Category',
+    'MainCategory'=> 'Main Category',
+    'SubCategory'=> 'Sub Category',
+    'addNewCategory'=> 'Add New Category',
+    'chooseMainCategory'=> 'Choose Main Category',
+    'pleaseChooseMainCategory'=> 'please Choose Main Category',
+
 ];

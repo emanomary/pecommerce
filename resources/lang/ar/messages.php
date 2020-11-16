@@ -115,5 +115,10 @@ return [
     'active'=> 'مفعل',
     'unactive'=> 'غير مفعل',
     'successDeleteCategory'=> 'تم حذف القسم بنجاح',
+    'MainCategory'=> 'قسم رئيسي',
+    'SubCategory'=> 'قسم فرعي',
+    'addNewCategory'=> 'إضافة قسم جديد',
+    'chooseMainCategory'=> 'اختر القسم الرئيسي',
+    'pleaseChooseMainCategory'=> 'من فضلك اختر القسم الرئيسي',
 
 ];

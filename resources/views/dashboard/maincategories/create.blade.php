@@ -12,7 +12,7 @@
                                 </li>
                                 <li class="breadcrumb-item"><a href="{{route('maincategories.index')}}">{{__('messages.mainCategory')}}</a>
                                 </li>
-                                <li class="breadcrumb-item active">{{__('messages.addMainCategory')}}
+                                <li class="breadcrumb-item active">{{__('messages.addNewCategory')}}
                                 </li>
                             </ol>
                         </div>
@@ -26,7 +26,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title" id="basic-layout-form">{{__('messages.addMainCategory')}}</h4>
+                                    <h4 class="card-title" id="basic-layout-form">{{__('messages.addNewCategory')}}</h4>
                                     <a class="heading-elements-toggle">
                                         <i class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
@@ -102,7 +102,34 @@
                                                             @enderror
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="row hidden" id="cats_list">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="mainCategories">{{__('messages.chooseMainCategory')}}</label>
+                                                            <select name="parent_id" class="form-control" style="width:auto;">
+                                                                <optgroup label="{{__('messages.pleaseChooseMainCategory')}}">
+                                                                    @if($categories && $categories->count()>0)
+{{--
+                                                                        @foreach($categories as $category)
+--}}
+                                                                            @php
+                                                                              subCatRecursion($categories, 0,'-');
+                                                                            @endphp
+                                                                            {{--<option
+                                                                                value="{{$category->id}}">{{$category->name}}
+                                                                            </option>--}}
+                                                                        {{--@endforeach--}}
+                                                                    @endif
 
+                                                                </optgroup>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    @error('parent_id')
+                                                    <span class="text-danger"> {{ $message }}</span>
+                                                    @enderror
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-6">
@@ -118,6 +145,29 @@
                                                             @error("is_active")
                                                             <span class="text-danger">{{$message }}</span>
                                                             @enderror
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <div class="form-group mt-1">
+                                                            <input type="radio"
+                                                                   value="1"
+                                                                   name="type"
+                                                                   class="switchery" data-color="success"
+                                                                   checked/>
+                                                            <label for="switcheryColor4"
+                                                                   class="card-title ml-1">{{__('messages.MainCategory')}}</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <div class="form-group mt-1">
+                                                            <input type="radio"
+                                                                   value="2"
+                                                                   name="type"
+                                                                   class="switchery" data-color="success"/>
+                                                            <label for="switcheryColor4"
+                                                                   class="card-title ml-1">{{__('messages.SubCategory')}}</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -144,3 +194,18 @@
         </div>
     </div>
 @stop
+
+@section('script')
+    <script>
+        $('input:radio[name="type"]').change(function () {
+            if(this.checked && this.value=='2')
+            {
+                $('#cats_list').removeClass('hidden');
+            }
+            else
+            {
+                $('#cats_list').addClass('hidden');
+            }
+        });
+    </script>
+@endsection
